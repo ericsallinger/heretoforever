@@ -25,16 +25,45 @@ body {
   width: 100px;
   height: 100px;
   background-color: #2c3e50;
-  color: white;
   border: none;
   border-radius: 50%;
-  font-size: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 
 #play-button:focus {
   outline: none;
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 25px solid white;
+  display: inline-block;
+}
+
+.pause-icon {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pause-icon::before,
+.pause-icon::after {
+  content: "";
+  width: 12px;
+  height: 30px;
+  background-color: white;
+  display: inline-block;
+}
+
+.pause-icon::after {
+  margin-left: 8px;
 }
