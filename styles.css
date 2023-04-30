@@ -9,17 +9,40 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom, navy, purple);
-  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, rgb(3, 3, 69),   rgb(118, 7, 118));
+  font-family:'Courier New', Courier, monospace;
+}
+
+.text-overlay {
+  position: absolute;
+  top:10%;
+  left:10%;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.text-bot {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
 }
 
 .audio-container {
   width: 80%;
   max-width: 600px;
+  position: absolute;
+  top: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 #play-button {
   width: 100px;
@@ -44,7 +67,7 @@ body {
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-left: 25px solid white;
-  display: inline-block;
+  display: block;
 }
 
 .pause-icon {
